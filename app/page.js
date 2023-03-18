@@ -21,7 +21,7 @@ export default async function Home({ searchParams }) {
 	const results = data.results;
 
 	return (
-		<main className="flex flex-col items-center justify-center w-full px-20 mx-auto mt-16">
+		<main className="flex flex-col items-center justify-center w-full px-20 mx-auto mt-4">
 			<Results results={results} />
 		</main>
 	);
