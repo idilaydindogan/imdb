@@ -6,7 +6,7 @@ const MenuItem = ({ title, address, Icon }) => {
 		<div>
 			<Link
 				href={address}
-				className="mx-2 my-4 text-2xl md:mx-2 hover:text-amber-700"
+				className="mx-2 my-4 text-2xl font-bold md:mx-2 hover:text-amber-700"
 			>
 				<Icon className="mx-2 sm:hidden " />
 				<p className="hidden text-sm sm:inline">{title}</p>
