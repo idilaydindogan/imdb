@@ -17,7 +17,26 @@ const DarkModeSwitch = () => {
 	}
 
 	const currentTheme = theme === "system" ? systemTheme : theme;
-	return <></>;
+	return (
+		<>
+			{mounted &&
+				(currentTheme === "dark" ? (
+					<button
+						onClick={() => setTheme("light")}
+						className="text-xl cursor-pointer hover:text-amber-500"
+					>
+						<MdLightMode />
+					</button>
+				) : (
+					<button
+						onClick={() => setTheme("dark")}
+						className="text-xl cursor-pointer hover:text-amber-500"
+					>
+						<BsFillMoonFill />
+					</button>
+				))}
+		</>
+	);
 };
 
 export default DarkModeSwitch;
