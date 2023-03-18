@@ -11,7 +11,7 @@ const NavbarItem = ({ title, params }) => {
 	return (
 		<div>
 			<Link
-				href={`/?genre=${params}`}
+				href={`/nav/?genre=${params}`}
 				className={`hover:text-white dark:hover:text-amber-600 ${
 					genreParams &&
 					genreParams === params &&
