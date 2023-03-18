@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
 const API_KEY = process.env.API_KEY;
 
 const fetchMovieId = async (movieId) => {
@@ -8,11 +9,14 @@ const fetchMovieId = async (movieId) => {
 	);
 	return response.json();
 };
+// export async function generateMetadata({ params }) {
+// 	const data = await fetchMovieId(params.id);
+// 	return { title: data.title };
+// }
 
 const Movie = async ({ params }) => {
 	const movieId = params.id;
 	const data = await fetchMovieId(movieId);
-	console.log(data);
 
 	return (
 		<div className="w-full">
